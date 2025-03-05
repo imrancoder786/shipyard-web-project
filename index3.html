@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigilance Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .vigilance-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        .nav-link:hover, .nav-link:focus {
+            font-weight: bold;
+            color: yellow !important;
+        }
+    </style>
+    
+    <div>
+        <nav class="text-white navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="image" src="image/shipp5.jpg" alt="Brand Logo" style="height: 40px;">
+                    <span class="head">SHIPYARD</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index1.html" onclick="display('homepagecontainer')">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                           
+                                <li><a class="dropdown-item" href="team.html" onclick="display('teampagecontainer')">Our Team</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" >Services & Products</a></li>
+                        <li class="nav-item"><a class="nav-link " href="scaavl.html" >Stock Availablity</a></li>
+                      
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tender</a>
+                          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                              <li><a class="dropdown-item" href="index22.html" >Open Tender</a></li>
+                              <li><a class="dropdown-item" href="index222.html" >Apply Tender</a></li>
+                              <li><a class="dropdown-item" href="index2.html" >Notifications&Update</a></li>
+                          </ul>
+                      </li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="display('vigilencepagecontainer')">Vigilance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" onclick="display('contactuspagecontainer')">Contact Us</a></li>
+                    </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+    </div>
+
+<div class="container my-5">
+
+    
+    <div class="vigilance-section">
+        <h1 class="text-primary">Vigilance Guidelines</h1>
+        <p>The Vigilance Department ensures transparency, compliance, and security within the shipyard operations. It serves as a dedicated section for reporting grievances, maintaining ethical standards, and monitoring activities.</p>
+        <h1>Overview</h1>
+        <p>The vigilance department plays a crucial role in ensuring ethical practices throughout the shipyard.</p>
+        <h1>Guidelines</h1>
+        <ul>
+            <li>Prevent fraud and corruption.</li>
+            <li>Promote ethical behavior in all operations.</li>
+            <li>Encourage reporting of unethical conduct without fear of retaliation.</li>
+        </ul>
+        <h1>Contact Details</h1>
+        <p>For direct communication, please reach out to our vigilance officers:</p>
+        <ul>
+          <hr>
+            <li>Officer Name: Raja - Email: raja@gmail.com</li>
+            <li>Officer Name: Mohan - Email: mohan@gmail.com</li>
+            <hr>
+        </ul>
+    </div>
+
+  
+    <div class="vigilance-section">
+        <h1 class="text-primary">Report an Issue</h1>
+        <p>Please use the form below to confidentially report any unethical activities.</p>
+        <form id="Form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name (Optional)</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="contactDetails" class="form-label">Contact Details (Optional)</label>
+                <input type="text" class="form-control" id="contactDetails">
+            </div>
+            <div class="mb-3">
+                <label for="complaintType" class="form-label">Type Complaint</label>
+                <select class="form-select" id="complaintType" required>
+                    <option value="">Choose...</option>
+                    <option value="fraud">Fraud</option>
+                    <option value="corruption">Corruption</option>
+                    <option value="safety">Misbehave</option>
+                    <option value="harassment">Harassment</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Detailed Description</label>
+                <textarea class="form-control" id="description" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Default file input example</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    
+    <div class="vigilance-section">
+        <h1 class="text-primary">FAQs on Vigilance</h=1>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h1 class="accordion-header" id="faqOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                       How long you take to respond?
+                    </button>
+                </h1>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p style="font-size: 15px" class="text-danger">  We aim to respond to all complaints within 3 working days.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h1 class="accordion-header" id="faqTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How are complaints handled?
+                    </button>
+                </h1>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p style="font-size: 15px"class="text-danger";> Complaints are reviewed by the vigilance officers and then investigated .</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h1 class="accordion-header" id="faqThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Can I report anonymously?
+                    </button>
+                </h1>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      <p style="font-size: 15px;"class="text-danger"> Yes, you can report issues anonymously if you prefer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

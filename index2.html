@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipyard Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</head>
+<body>
+    <style>
+        .nav-link:hover, .nav-link:focus {
+            font-weight: bold;
+            color: yellow !important;
+        }
+    </style>
+    
+    <div>
+        <nav class="text-white navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="image" src="image/shipp5.jpg" alt="Brand Logo" style="height: 40px;">
+                    <span class="head">SHIPYARD</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index1.html" onclick="display('homepagecontainer')">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="team.html" onclick="display('teampagecontainer')">Our Team</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" >Services & Products</a></li>
+                        <li class="nav-item"><a class="nav-link " href="scaavl.html" >Stock Availablity</a></li>
+                      
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tender</a>
+                          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                              <li><a class="dropdown-item" href="index22.html" >Open Tender</a></li>
+                              <li><a class="dropdown-item" href="index222.html" >Apply Tender</a></li>
+                              <li><a class="dropdown-item" href="index2.html" >Notifications&Update</a></li>
+                          </ul>
+                      </li>
+                        <li class="nav-item"><a class="nav-link" href="index3.html" onclick="display('vigilencepagecontainer')">Vigilance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" onclick="display('contactuspagecontainer')">Contact Us</a></li>
+                    </ul>
+                    <div class="d-flex flex-row justify-content-right">
+                        <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">login</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container my-5 p-4 border rounded shadow-sm" style="background-color: #f8f9fa;">
+        <h1 class="text-primary text-center">Notifications & Updates</h1>
+        <div class="mt-4">
+            <h3 class="text-center">Subscribe for Tender Updates</h3>
+            <form id="subscriptionForm" class="text-center">
+                <div class="mb-3">
+                    <label for="subscriberEmail" class="form-label">Email ID</label>
+                    <input type="email" class="form-control" id="subscriberEmail" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <h1>(OPTIONAL)</h1>
+                </div>
+                <div class="mb-3">
+                    <label for="subscriberPhone" class="form-label">Mobile Number</label>
+                    <input type="tel" class="form-control" id="subscriberPhone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="smsUpdates">
+                    <label class="form-check-label" for="smsUpdates">Receive updates via SMS</label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="mt-5">
+            <h3 class="text-center">Current Tender Status</h3>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Tender 1
+                    <span class="badge bg-success">Open</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Tender 2
+                    <span class="badge bg-warning text-dark">Under Review</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Tender 3
+                    <span class="badge bg-danger">Closed</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Tender 4
+                    <span class="badge bg-info text-dark">Awarded</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+.moving-box {
+    position: relative;
+    animation: moveRightLeft 2s infinite alternate;
+}
+
+@keyframes moveRightLeft {
+    0% { left: 0; }
+    100% { left: 100px; }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB-Facility</title>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f8fb;
+        }
+        
+        .header {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 20px;
+            color: #fff;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 20px;
+            position: relative;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background-color: #007bff;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .content-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease-in-out;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .content-box:hover {
+            transform: scale(1.02);
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 5px;
+            font-size: 16px;
+            animation: fadeInLeft 1s ease-in-out;
+        }
+
+        .bullet-list li::before {
+            content: "\f058";
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <style>
+        .nav-link:hover, .nav-link:focus {
+            font-weight: bold;
+            color: yellow !important;
+        }
+    </style>
+    
+    <div>
+        <nav class="text-white navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="image" src="image/shipp5.jpg" alt="Brand Logo" style="height: 40px;">
+                    <span class="head">SHIPYARD</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index1.html" onclick="display('homepagecontainer')">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                
+                                <li><a class="dropdown-item" href="team.html" onclick="display('teampagecontainer')">Our Team</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" >Services & Products</a></li>
+                        <li class="nav-item"><a class="nav-link " href="scaavl.html" >Stock Availablity</a></li>
+                      
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tender</a>
+                          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                              <li><a class="dropdown-item" href="index22.html" onclick="display('openpagecontainer')">Open Tender</a></li>
+                              <li><a class="dropdown-item" href="index222.html" onclick="display('applypagecontainer')">Apply Tender</a></li>
+                              <li><a class="dropdown-item" href="index2.html" onclick="display('notifypagecontainer')">Notifications&Update</a></li>
+                          </ul>
+                      </li>
+                        <li class="nav-item"><a class="nav-link" href="index3.html" onclick="display('vigilencepagecontainer')">Vigilance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" onclick="display('contactuspagecontainer')">Contact Us</a></li>
+                    </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <h2 class="header">SB-Facility</h2>
+
+    <div class="container mt-4">
+
+        <div class="content-box">
+            <div class="section-title">Dock No 2</div>
+            <p>The Dock No.2 of 255 x 43 x 9 M is available for building ships up to 1,10,000 DWT. This dock and the grand assembly area are served by two Gantry cranes (300 T and 150 T) and two LLTT cranes (50 T).</p>
+        </div>
+
+        <div class="content-box">
+            <div class="section-title">Steel Stock Yard</div>
+            <p>The steel stockyard has an area of 13,000 Sq.M. aided with two gantry cranes of 25T each and one semi-gantry crane of 25 T. It is directly linked to the rail lines as well as to the waterfront, in addition to road connections. This enables steel to be brought in through wagons, barges, or trucks.</p>
+        </div>
+
+        <div class="content-box">
+            <div class="section-title">Hull Shop</div>
+            <p>The Hull Shop is self-contained with infrastructure required for fabrication of hull blocks up to 50 T. The shop is provided with EOT cranes (50 T) for along the bay movements and gantry crane (20 T) and trailers for across the bay transfer of materials.</p>
+        </div>
+
+        <div class="content-box">
+            <div class="section-title">Other Major Equipments/Facilities</div>
+            <ul class="bullet-list">
+                <li>C.N.C. Cutting Machine</li>
+                <li>Plasma Cutting Machine</li>
+                <li>Shot Blasting Machine</li>
+                <li>Automatic Painting Machine</li>
+                <li>1200 T Hydraulic Press</li>
+                <li>Line Heating Techniques for curved shell formation</li>
+                <li>F.C.B. One side welding for large panels</li>
+                <li>Semi-automatic CO2, Gravity welding machines</li>
+                <li>Electro Slag welding</li>
+                <li>150mm Pipe Bending Machine</li>
+                <li>Pipe Coaster (1.2 m dia capacity)</li>
+                <li>150 tonne transporter</li>
+            </ul>
+        </div>
+
+        <div class="content-box">
+            <div class="section-title">Assembly Shop</div>
+            <p>This shop has a telescopic sliding roof with gantry cranes of 300 T and 150 T which spans over it and the building dock. Hull blocks up to 450 T can be jumboized here and erected in the building dock using the gantry crane. In addition, two 20 T capacity EOT cranes are there in the shop.</p>
+        </div>
+
+        <div class="content-box">
+            <div class="section-title">Pipe and Sheet Metal Shop</div>
+            <p>The pipe shop is provided with all the necessary equipment for bending, cutting, welding, and pickling of pipes. The sheet metal shop handles all the light steel fabrications, trunking, etc.</p>
+        </div>
+
+        <div class="content-box">
+            <div class="section-title">Quays</div>
+            <p>CSL has a total of three quays, having almost a length of 1 KM.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

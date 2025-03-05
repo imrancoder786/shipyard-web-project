@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financials</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .content-section {
+            margin-top: 50px;
+        }
+        .image-section img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .text-section {
+            padding: 20px;
+        }
+        .financial-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        .financial-link:hover {
+            transform: translateX(5px);
+            color: #0056b3;
+        }
+        .financial-link::before {
+            content: "▶";
+            margin-right: 8px;
+            color: #007bff;
+            transition: margin-right 0.3s ease-in-out;
+        }
+        .financial-link:hover::before {
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        .nav-link:hover, .nav-link:focus {
+            font-weight: bold;
+            color: yellow !important;
+        }
+    </style>
+    
+    <div>
+        <nav class="text-white navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="image" src="image/shipp5.jpg" alt="Brand Logo" style="height: 40px;">
+                    <span class="head">SHIPYARD</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index1.html" onclick="display('homepagecontainer')">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                         
+                                <li><a class="dropdown-item" href="team.html" onclick="display('teampagecontainer')">Our Team</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" >Services & Products</a></li>
+                        <li class="nav-item"><a class="nav-link " href="scaavl.html" >Stock Availablity</a></li>
+                      
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tender</a>
+                          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                              <li><a class="dropdown-item" href="index22.html" >Open Tender</a></li>
+                              <li><a class="dropdown-item" href="index222.html" >Apply Tender</a></li>
+                              <li><a class="dropdown-item" href="index2.html" >Notifications&Update</a></li>
+                          </ul>
+                      </li>
+                        <li class="nav-item"><a class="nav-link" href="index3.html" >Vigilance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" >Contact Us</a></li>
+                    </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+    </div>
+<div class="container">
+    <hr>
+    <h2 class="text-center mt-4">FINANCIALS</h2>
+    <hr>
+
+    <div class="row content-section">
+        <div class="col-md-6 image-section">
+            <img src="image/finan.jpeg" alt="Financials Image">
+        </div>
+        <div class="col-md-6 text-section">
+            <p>
+                As the biggest shipyard in India, CSL believes not only in the quantity of products and services but also in the value.
+                The performance and increase in aggregate productivity of CSL are clearly visible in the financial statements.
+            </p>
+            <a href="pdf/shipfinreport.pdf" class="financial-link">Financial Reports</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

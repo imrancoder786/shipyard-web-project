@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipyard Inquiry Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center">Shipyard Inquiry Form</h2>
+    <form id="shipForm">
+        <div class="mb-3">
+            <label for="budget" class="form-label">Budget/Amount</label>
+            <input type="number" class="form-control" id="budget" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="technology" class="form-label">Preferred Shipbuilding Technology</label>
+            <input type="text" class="form-control" id="technology" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="shipType" class="form-label">Ship Type</label>
+            <select class="form-select" id="shipType" required>
+                <option value="">Select Ship Type</option>
+                <option value="Oil Tanker">Oil Tanker</option>
+                <option value="Cargo Ship">Cargo Ship</option>
+                <option value="Container Ship">Container Ship</option>
+                <option value="Passenger Ship">Passenger Ship</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+</div>
+
+<script>
+document.getElementById("shipForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const data = {
+        budget: document.getElementById("budget").value,
+        technology: document.getElementById("technology").value,
+        shipType: document.getElementById("shipType").value
+    };
+
+    try {
+        const response = await fetch("http://localhost:5001/submit-inquiry", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            Swal.fire({
+                title: "Success!",
+                text: "Form submitted and stored in the database successfully!",
+                icon: "success"
+            });
+            document.getElementById("shipForm").reset();
+        } else {
+            Swal.fire({
+                title: "Error!",
+                text: "Failed to submit form. Try again.",
+                icon: "error"
+            });
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        Swal.fire({
+            title: "Error!",
+            text: "Server error!",
+            icon: "error"
+        });
+    }
+});
+</script>
+
+</body>
+</html>

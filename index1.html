@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href=".moving-box.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipyard Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .map-responsive {
+            overflow: hidden;
+            padding-top: 55%;
+            position: relative;
+            height: 0;
+        }
+        .map-integration {
+        padding: 2em;
+    }
+
+       .map-integration iframe {
+           width: 100%;
+           height: 400px;
+           border: none;
+       }
+        .map-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+<div style="background-image: url('image/ocean1.jpg');">
+
+    <style>
+        .nav-link:hover, .nav-link:focus {
+            font-weight: bold;
+            color: yellow !important;
+        }
+    </style>
+    
+    
+    <nav class="text-white navbar navbar-expand-lg navbar-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="image" src="image/shipp5.jpg" alt="Brand Logo" style="height: 40px;">
+                <span class="head">SHIPYARD</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index1.html" >Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" >Services & Products</a></li>
+                    <li class="nav-item"><a class="nav-link " href="scaavl.html" >Stock Availablity</a></li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tender</a>
+                      <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                          <li><a class="dropdown-item" href="index22.html" >Open Tender</a></li>
+                          <li><a class="dropdown-item" href="index222.html" >Apply Tender</a></li>
+                          <li><a class="dropdown-item" href="index2.html" >Notifications&Update</a></li>
+                      </ul>
+                  </li>
+                    <li class="nav-item"><a class="nav-link" href="index3.html" >Vigilance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <p class="corner">Welcome, <span id="userName-corner">Guest</span></p>
+                <button id="authButton" class="btn btn-light ms-3" type="button"></button>
+
+                
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="d-flex">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"  onclick="window.location.href='lo.html'">Log in</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+  
+    <div  id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+                <img src="image/shipp1.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+                <img src="image/shipp2.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+                <img src="image/shipp4.jpg" class="d-block w-100" alt="">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<div >
+    <div  class="text-center my-5">
+        <h1 style="font-weight: bold;" class="text-danger display-4">Welcome to Our Shipyard</h1>
+        <p style="font-weight: bold;" class="lead ">Discover our expertise in shipbuilding and maritime services.
+
+Kallapatti Shipyard in Chennai (Madras) builds and repairs ships, including commercial and defense vessels. With modern tools and skilled workers, we ensure quality, safety, and on-time delivery. We focus on innovation and customer satisfaction, making us a trusted name in the industry.
+        </p>
+        <button class="btn btn-warning btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#learnMoreModal">Learn More</button>
+    </div>
+</div>
+    
+    <div class="modal fade" id="learnMoreModal" tabindex="-1" aria-labelledby="learnMoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="learnMoreModalLabel">Learn More About Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p> 
+
+                      Kallapatti Shipyard, located in Chennai (Madras), is a trusted name in shipbuilding and repair. We build and fix different types of ships, including commercial and defense vessels.  
+                      
+                      With modern facilities and skilled workers, we ensure high-quality work, safety, and on-time delivery. Our services include ship design, construction, and maintenance for clients in India and around the world.  
+                      
+                      At Kallapatti Shipyard, we focus on innovation and customer satisfaction, making us a reliable partner in the maritime industry.</p>
+                    <p>Explore our projects, services, and the latest technologies we implement in our shipyard.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="moving-box">
+    <div class="container mt-4">
+        <div class="row row-cols-7">
+            <div class="container-fluid">
+
+            </div>
+            <div class="col">
+                <div class="card p-3 text-center bg-success highlight text-white">
+                    <p>Bulk Carriers</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 text-center highlight bg-success text-white">
+                    <p>Containers</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 text-center highlight bg-success text-white">
+                    <p>Tankers</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 text-center highlight bg-success text-white">
+                    <p>Cruise Liners</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-3 text-center highlight bg-success text-white ">
+                <p>Vessels</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card p-3 text-center highlight bg-success text-white">
+                <p>Floating Cranes</p>
+            </div>
+        </div>
+        
+    </div>
+ </div>
+</div>
+
+    
+
+    <h1 class="mt-5 text-center">Our Location</h1>
+    <section class="map-integration">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4175.817783931781!2d80.3255272!3d13.3128744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5276c42b1d813f%3A0xe2dfb21fc318d4b6!2sL%26T%20Ship%20Building!5e1!3m2!1sen!2sin!4v1740916984267!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+
+   
+    
+
+
+<div class="bg-dark text-center container my-5 p-4 border rounded shadow-sm p" >
+  <h1 class="text-white">Contact & Support</h1>
+  <h2 class="text-white">+91 8489867581</h2>
+  <h3 class="text-white">ship@gmail.com</h3>
+  <div class="mt-4">
+    <a href="contact.html">
+        <button class="btn btn-success btn-lg">Contact Us</button>
+    </a>
+</div>
+
+</div>
+
+
+
+
+
+
+
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let userName = localStorage.getItem("userName");
+                const userNameSpan = document.getElementById("userName-corner");
+                const authButton = document.getElementById("authButton");
+        
+                
+                if (userName) {
+                    userNameSpan.textContent = userName;
+                    authButton.textContent = "Log out";  
+                    authButton.style.display = "inline-block"; 
+        
+                    authButton.onclick = function() {
+                        localStorage.removeItem("userName");  
+                        location.reload(); 
+                    };
+                } else {
+                    userNameSpan.textContent = "Guest"; 
+                    authButton.textContent = "Log in";
+                    authButton.style.display = "inline-block"; 
+        
+                    authButton.onclick = function() {
+                        window.location.href = "lo.html";  
+                    };
+                }
+            });
+        </script>
+        
+
+        
+</div>
+</body>
+</html>
+<div>
+
+

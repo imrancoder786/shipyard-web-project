@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service and Products</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        .container {
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .service-title {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2f4f4f;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #28a745, #218838);
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 14px;
+        }
+        .read-more {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 12px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .read-more:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <style>
+        .nav-link:hover, .nav-link:focus {
+            font-weight: bold;
+            color: yellow !important;
+        }
+    </style>
+    
+    
+    <nav class="text-white navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="image" src="image/shipp5.jpg" alt="Brand Logo" style="height: 40px;">
+                <span class="head">SHIPYARD</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index1.html" >Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html" >Services & Products</a></li>
+                    <li class="nav-item"><a class="nav-link " href="scaavl.html" >Stock Availablity</a></li>
+                   
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tender</a>
+                      <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                          <li><a class="dropdown-item" href="index22.html" onclick="display('openpagecontainer')">Open Tender</a></li>
+                          <li><a class="dropdown-item" href="index222.html" onclick="display('applypagecontainer')">Apply Tender</a></li>
+                          <li><a class="dropdown-item" href="index2.html" onclick="display('notifypagecontainer')">Notifications&Update</a></li>
+                      </ul>
+                  </li>
+                    <li class="nav-item"><a class="nav-link" href="index3.html" onclick="display('vigilencepagecontainer')">Vigilance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" onclick="display('contactuspagecontainer')">Contact Us</a></li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"  onclick="window.location.href='lo.html'">Log in</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h2 class="service-title">SERVICE AND PRODUCTS</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-4">
+                    <h3 class="card-title">Ship Building</h3>
+                    <p class="card-text">Modern shipbuilding integrates advanced technologies to enhance efficiency, durability, and sustainability. Computer-Aided Design (CAD) and Computer-Aided Manufacturing (CAM) streamline the design and production process, ensuring precision and minimizing errors. Automated welding and robotic assembly improve construction speed and quality, while cutting-edge materials such as high-strength steel and composite materials enhance structural integrity and fuel efficien</p>
+                    <a href="shipbuil.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-4">
+                    <h3 class="card-title">Ship Repair</h3>
+                    <p class="card-text">CSL started offering ship repair services in 1982 and has undertaken upgrades.</p>
+                    <a href="shiprep.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-4">
+                    <h3 class="card-title">Marine Engineering</h3>
+                    <p class="card-text">The Marine Engineering Training Institute (METI) commenced the Graduate program.</p>
+                    <a href="mereg.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-4">
+                    <h3 class="card-title">Facilities</h3>
+                    <p class="card-text">CSL has always focused on sustainable improvisation of infrastructure.</p>
+                    <a href="faci.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-4">
+                    <h3 class="card-title">Financials</h3>
+                    <p class="card-text">As the biggest shipyard in India, CSL believes in quality and value.</p>
+                    <a href="fanan.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

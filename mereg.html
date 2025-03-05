@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Engineering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .content-section {
+            margin-top: 50px;
+        }
+        .image-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .text-section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        .nav-link:hover, .nav-link:focus {
+            font-weight: bold;
+            color: yellow !important;
+        }
+    </style>
+    
+    <div>
+        <nav class="text-white navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="image" src="image/shipp5.jpg" alt="Brand Logo" style="height: 40px;">
+                    <span class="head">SHIPYARD</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index1.html" onclick="display('homepagecontainer')">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                             
+                                <li><a class="dropdown-item" href="team.html" onclick="display('teampagecontainer')">Our Team</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" >Services & Products</a></li>
+                        <li class="nav-item"><a class="nav-link " href="scaavl.html" >Stock Availablity</a></li>
+                      
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tender</a>
+                          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                              <li><a class="dropdown-item" href="index22.html" onclick="display('openpagecontainer')">Open Tender</a></li>
+                              <li><a class="dropdown-item" href="index222.html" onclick="display('applypagecontainer')">Apply Tender</a></li>
+                              <li><a class="dropdown-item" href="index2.html" onclick="display('notifypagecontainer')">Notifications&Update</a></li>
+                          </ul>
+                      </li>
+                        <li class="nav-item"><a class="nav-link" href="index3.html" onclick="display('vigilencepagecontainer')">Vigilance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" onclick="display('contactuspagecontainer')">Contact Us</a></li>
+                    </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+<div class="container">
+
+
+    <h2 class="text-center mt-4">MARINE ENGINEERING</h2>
+    <hr>
+
+    <div class="row content-section">
+        <div class="col-md-6 image-section">
+            <img src="image/merfa.webp" alt="Marine Engineering Institute">
+        </div>
+        <div class="col-md-6 text-section">
+            <p>
+                The Marine Engineering Training Institute (METI) commenced the Graduate Mechanical Engineers (GME) Course in 1993.
+                This 12-month course is mandatory for continuing with the 6 months Shipboard training prior to appearing for Class IV 
+                Certificate of Competency exam (MEO Class-IV) to become an Officer in charge of an Engineering Watch in a manned engine 
+                room or as a designated duty engineer in a periodically unmanned engine room of Merchant Ships.
+            </p>
+            <p><strong>DGM Training /SD& METI</strong> 0484 2926263</p>
+            <p><strong>HOD METI</strong> 0484 2926264</p>
+            <p><strong>Hostel Warden</strong> 0484 2926265</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
