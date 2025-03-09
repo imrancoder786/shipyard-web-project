@@ -23,8 +23,8 @@ function signIn() {
   let user = isCorrectEmailAndPassword(loginEmail, loginPassword);
   
   if (user) {
-    localStorage.setItem("userName", user.name);  // Store user name
-    window.location.href = "index1.html"; // Redirect to home page
+    localStorage.setItem("userName", user.name);  
+    window.location.href = "index.html"; 
   } else {
     swal({
       text: "Incorrect email or password",
@@ -35,7 +35,7 @@ function signIn() {
 function isCorrectEmailAndPassword(email, password) {
   for (let i = 0; i < users.length; i++) {
     if (users[i].email === email && users[i].password === password) {
-      return users[i];  // Return the user object
+      return users[i]; 
     }
   }
   return null;

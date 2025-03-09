@@ -1,6 +1,6 @@
 .moving-box {
     position: relative;
-    animation: moveRightLeft 2s infinite alternate;
+    animation: moveRightLeft 3s infinite alternate;
 }
 
 @keyframes moveRightLeft {

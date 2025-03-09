@@ -26,31 +26,30 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="index1.html" onclick="display('homepagecontainer')">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index.html" >Home</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
                             <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
                                
-                                <li><a class="dropdown-item" href="#" onclick="display('teampagecontainer')">Our Team</a></li>
+                                <li><a class="dropdown-item" href="#" >Our Team</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="index.html" >Services & Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index1.html" >Services & Products</a></li>
                         <li class="nav-item"><a class="nav-link " href="scaavl.html" >Stock Availablity</a></li>
                       
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tender</a>
                           <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                              <li><a class="dropdown-item" href="index22.html" onclick="display('openpagecontainer')">Open Tender</a></li>
-                              <li><a class="dropdown-item" href="index222.html" onclick="display('applypagecontainer')">Apply Tender</a></li>
-                              <li><a class="dropdown-item" href="index2.html" onclick="display('notifypagecontainer')">Notifications&Update</a></li>
+                              <li><a class="dropdown-item" href="index22.html" >Open Tender</a></li>
+                              <li><a class="dropdown-item" href="index222.html" >Apply Tender</a></li>
+                              <li><a class="dropdown-item" href="index2.html" >Notifications&Update</a></li>
                           </ul>
                       </li>
-                        <li class="nav-item"><a class="nav-link" href="index3.html" onclick="display('vigilencepagecontainer')">Vigilance</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html" onclick="display('contactuspagecontainer')">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index3.html" >Vigilance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" >Contact Us</a></li>
                     </ul>
-                    <div class="d-flex">
-                        <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
-                    </div>
+                    <p class="corner">Welcome, <span id="userName-corner">Guest</span></p>
+                    <button id="authButton" class="btn btn-light ms-3" type="button"></button>
                 </div>
             </div>
         </nav>
@@ -103,7 +102,35 @@
     </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let userName = localStorage.getItem("userName");
+        const userNameSpan = document.getElementById("userName-corner");
+        const authButton = document.getElementById("authButton");
+
+        
+        if (userName) {
+            userNameSpan.textContent = userName;
+            authButton.textContent = "Log out";  
+            authButton.style.display = "inline-block"; 
+
+            authButton.onclick = function() {
+                localStorage.removeItem("userName");  
+                location.reload(); 
+            };
+        } else {
+            userNameSpan.textContent = "Guest"; 
+            authButton.textContent = "Log in";
+            authButton.style.display = "inline-block"; 
+
+            authButton.onclick = function() {
+                window.location.href = "lo.html";  
+            };
+        }
+    });
+</script>
 
 </body>
 </html>
